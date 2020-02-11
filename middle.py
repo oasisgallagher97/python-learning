@@ -1,4 +1,4 @@
-with open('F:/python-learning/report.txt', encoding='utf-8') as f:
+with open('report.txt', encoding='utf-8') as f:
     raw_results = f.readlines()
     global count
     count = len(raw_results)
@@ -42,7 +42,7 @@ for j in range(1, 31):
 
 total_results = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-for i in range(2,13):
+for i in range(2, 13):
     for mo in modified_2:
         total_results[i-2] = total_results[i-2] + mo[i]
 #print(total_result)
@@ -56,7 +56,7 @@ for i in range(2,13):
 
 modified_2.insert(0, avg_results)
 modified_2.insert(0, newline)
-modified_3 = modified_2[2:]
+modified_3 = modified_2[1:]
 
 for i in range(2,13):
     for modi in modified_3:
@@ -64,7 +64,7 @@ for i in range(2,13):
         if float(modi[i]) < 60:
             modi[i] = '不合格'
 
-modified_3.insert(0, avg_results)
+#modified_3.insert(0, avg_results)
 modified_3.insert(0, newline)
 
 modified_4 = []
