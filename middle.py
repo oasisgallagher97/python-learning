@@ -2,7 +2,7 @@ with open('report.txt', encoding='utf-8') as f:
     raw_results = f.readlines()
     global count
     count = len(raw_results)
-    #print(count)
+    print(count)
     results = ''.join(raw_results).splitlines()
     #print(results)
 
@@ -46,7 +46,7 @@ for i in range(2, 13):
     for mo in modified_2:
         total_results[i-2] = total_results[i-2] + mo[i]
 #print(total_result)
-avg_results = [round(total_result/count, 1) for total_result in total_results]
+avg_results = [round(total_result/(count-1), 1) for total_result in total_results]
 avg_results.insert(0, '平均')
 avg_results.insert(0, '0')
 
